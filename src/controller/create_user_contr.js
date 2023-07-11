@@ -37,7 +37,7 @@ const createUser = asyncWrapper(async (req, res) => {
   // The API key is hashed and the user document is saved
   await user.save();
 
-  res.status(StatusCodes.CREATED).json({ maskedKey, apiKey });
+  res.status(StatusCodes.CREATED).json({ apiKey });
 });
 
 module.exports = { createUser };
